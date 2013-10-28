@@ -6,13 +6,12 @@ $(call inherit-product, device/htc/enrc2b/enrc2b.mk)
 PRODUCT_RELEASE_NAME := slim_enrc2b
 
 # Boot animation
-#TARGET_SCREEN_HEIGHT := 1280
-#TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 ## Preload bootanimation
 #TARGET_BOOTANIMATION_PRELOAD := true    device/htc/enrc2b/bootanimation.zip:system/media/bootanimation.zip \
-PRODUCT_COPY_FILES +=  \
-        device/htc/enrc2b/audio/alarms/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
+PRODUCT_COPY_FILES += device/htc/enrc2b/audio/alarms/Alarm_Beep_01.ogg:system/media/audio/alarms/Alarm_Beep_01.ogg \
 	device/htc/enrc2b/audio/alarms/Alarm_Beep_02.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
 	device/htc/enrc2b/audio/alarms/Alarm_Beep_03.ogg:system/media/audio/alarms/Alarm_Beep_03.ogg \
 	device/htc/enrc2b/audio/alarms/Alarm_Buzzer.ogg:system/media/audio/alarms/Alarm_Buzzer.ogg \
@@ -128,8 +127,20 @@ $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 # languages
 PRODUCT_LOCALES := en_US de_DE zh_CN zh_TW cs_CZ nl_BE nl_NL en_AU en_GB en_CA en_NZ en_SG fr_BE fr_CA fr_FR fr_CH de_AT de_LI de_CH it_IT it_CH ja_JP ko_KR pl_PL ru_RU es_ES ar_EG ar_IL bg_BG ca_ES hr_HR da_DK en_IN en_IE en_ZA fi_FI el_GR iw_IL hi_IN hu_HU in_ID lv_LV lt_LT nb_NO pt_BR pt_PT ro_RO sr_RS sk_SK sl_SI es_US sv_SE tl_PH th_TH tr_TR uk_UA vi_VN
 
-PRODUCT_PACKAGES += ShareLogs
-PRODUCT_PACKAGES += Tegra3Parts
+
+PRODUCT_PACKAGES += ShareLogs \
+		    Tegra3Parts \
+		    Loclock \
+		    Calendar \
+		    Exchange \
+		    Galaxy4 \
+		    HoloSpiralWallpaper \
+		    Launcher2 \
+		    LiveWallpapers \
+		    MagicSmokeWallpapers \
+		    QuickSearchBox \
+		    VideoEditor \
+		    VoiceDialer
 
 # Inherit device configuration
 $(call inherit-product, device/htc/enrc2b/full_enrc2b.mk)
