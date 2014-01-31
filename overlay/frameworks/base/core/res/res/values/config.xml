@@ -24,8 +24,8 @@
     <!-- Default color for notification LED is green. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
 
-    <!-- disable menu hard key in non-pattern lockscreen -->
-    <bool name="config_disableMenuKeyInLockScreen">true</bool>
+    <!-- disable menu hard key in non-pattern lockscreen
+    <bool name="config_disableMenuKeyInLockScreen">true</bool> -->
 
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
